@@ -1,4 +1,69 @@
-.rightBar{
-    flex: 2;
-    border-left: 1px solid lightgrey;
+.rightBar {
+  flex: 2;
+  border-left: 1px solid lightgrey;
+  position: sticky;
+  top: 100px;
+  height: calc(100vh - 100px);
+  overflow: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .container {
+    padding: 20px;
+
+    .item {
+      span {
+        color: gray;
+      }
+
+      .user {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 20px 0px;
+
+        .userInfo {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+
+          img{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+
+          }
+
+          span{
+            font-weight: 500;
+          }
+        }
+
+        .buttons {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          button{
+            border: none;
+            padding: 5px;
+            color: white;
+            border-radius: 15%;
+            cursor: pointer;
+
+            &:first-child{
+                background-color: rgb(39, 39, 255);
+            }
+
+            &:last-child{
+                background-color: rgb(233, 0, 0);
+            }
+          }
+        }
+      }
+    }
+  }
 }
